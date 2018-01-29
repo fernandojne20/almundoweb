@@ -1,0 +1,76 @@
+<div class="columns">
+  <div class="column is-one-quarter">
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          Filtros
+        </p>
+      </header>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <p class="card-header-title">
+          Nombre de Hotel
+        </p>
+        <a href="#" class="card-header-icon" aria-label="more options">
+          <span class="icon">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </a>
+        <input type="text">
+        <button type="button" class="button is-link"> Aceptar</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <div class="content">
+          <div class="columns">
+            <div class="column"><p class="title">Estrellas </p></div>
+            <div class="column">
+              <a href="#" class="card-header-icon" aria-label="more options">
+                <span class="icon">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+          
+          
+          <div class="columns">
+            <div class="column">
+              Todas las Estrellas 
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column">
+              5 Estrellas
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column">
+              4 Estrellas
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column">
+              3 Estrellas
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column">
+              2 Estrellas
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column">
+              1 Estrellas
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+      <app-hotel-list [list]="hotels"></app-hotel-list>
+  </div>
+</div>
