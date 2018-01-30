@@ -1,0 +1,32 @@
+.amenity {
+    margin-right: 10px; 
+    margin-top: 10px;
+}
+
+.btn-full{
+    width: 100%;
+    font-weight: 800 !important;
+}
+
+.price {
+    color: #d8550a;
+    
+}
+.price strong{
+    font-weight: 800 !important;
+    font-size: 2.5rem;
+    vertical-align: middle;
+}
+
+.contain{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.dashed {
+    border-right: #b7b7b7 dashed 0.5px;
+}
+
+.fit {
+    height: 100%;
+}

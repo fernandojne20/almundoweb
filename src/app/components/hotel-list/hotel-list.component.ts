@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { Hotel } from "../../services/hotel.service";
+import { Hotel, HotelService } from "../../services/hotel.service";
 
 
 @Component({
@@ -12,7 +12,7 @@ export class HotelListComponent implements OnInit, OnChanges {
   @Input('list')
   hotels:Hotel[]; 
 
-  constructor() { }
+  constructor( private _hotelService:HotelService) { }
 
   ngOnInit() {
   }
@@ -20,6 +20,10 @@ export class HotelListComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges) {
     console.log("HOTEL", this.hotels);
     
+  }
+
+  getStars(numberStars:number):number[]{
+    return this._hotelService.getStars(numberStars);
   }
 
 }

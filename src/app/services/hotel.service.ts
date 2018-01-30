@@ -18,6 +18,14 @@ export class HotelService {
         // return this.http.get('https://jsonplaceholder.typicode.com/posts');
         return this.http.get<Hotel[]>('assets/data.json');
     }
+    
+    getStars(numberStars: number): number[] {
+        if (numberStars) {
+            return Array(numberStars).fill(1);
+        } else {
+            return [];
+        }
+    }
 }
 
 
