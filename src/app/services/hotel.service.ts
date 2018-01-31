@@ -16,9 +16,9 @@ export class HotelService {
   searchHotels(parameters: any = undefined): Observable<Hotel[]> {
 
     if (parameters) {
-      return this.http.get<Hotel[]>('http://localhost:3000/hotels', {params: parameters});
+      return this.http.get<Hotel[]>('http://almundoapi.herokuapp.com/hotels', {params: parameters});
     } else {
-      return this.http.get<Hotel[]>('http://localhost:3000/hotels');
+      return this.http.get<Hotel[]>('http://almundoapi.herokuapp.com/hotels');
     }
   }
 
