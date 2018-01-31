@@ -9,7 +9,7 @@
       <div class="columns">
         <div class="column is-4">
           
-            <img src="assets/img/hotels/{{hotel.image}}" class="contain" alt="Placeholder image">
+            <img src="{{hotel.image}}" class="contain" alt="Placeholder image">
         </div>
         <div class="column">
           <div class="columns fit">
@@ -21,7 +21,7 @@
                     <span class="icon star-ylw" *ngFor="let star of getStars(hotel.stars)"></span>
                   </div>
                   <span class="icon amenity" *ngFor="let amenity of hotel.amenities">
-                    <img src="assets/img/amenities/{{amenity}}.svg" alt="">
+                    <img src="{{amenity}}" alt="">
                   </span>
                 </div>
               </div>

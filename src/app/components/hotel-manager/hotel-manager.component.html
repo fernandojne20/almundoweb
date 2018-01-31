@@ -62,7 +62,7 @@
         <div class="level">
           <div class="level-left">
             <div class="level-item">
-                <input type="checkbox" [checked]="stars.ALL.checked" (change)="stars.ALL.checked = !stars.ALL.checked; starSelected();" /> 
+                <input type="checkbox" [checked]="stars.ALL.checked" (change)="stars.ALL.checked = !stars.ALL.checked; starSelected(stars.ALL.checked, 'ALL');" /> 
                 Todas las Estrellas 
             </div>  
           </div>
@@ -70,7 +70,7 @@
         <div class="level">
           <div class="level-left">
             <div class="level-item">
-              <input type="checkbox" [checked]="stars.CINCO.checked" (change)="stars.CINCO.checked = !stars.CINCO.checked; starSelected();" />  
+              <input type="checkbox" [checked]="stars.CINCO.checked" (change)="stars.CINCO.checked = !stars.CINCO.checked; starSelected(stars.CINCO.checked, 5);" />  
               <span class="icon star-ylw side-icon" *ngFor="let star of getStars(5)" ></span>
                 
             </div>
@@ -79,7 +79,7 @@
         <div class="level">
           <div class="level-left">
             <div class="level-item">
-                <input type="checkbox" [checked]="stars.CUATRO.checked" (change)="stars.CUATRO.checked = !stars.CUATRO.checked; starSelected();" />
+                <input type="checkbox" [checked]="stars.CUATRO.checked" (change)="stars.CUATRO.checked = !stars.CUATRO.checked; starSelected(stars.CUATRO.checked,4);" />
                 <span class="icon star-ylw side-icon" *ngFor="let star of getStars(4)" ></span>
             </div>
           </div>
@@ -87,7 +87,7 @@
         <div class="level">
           <div class="level-left">
             <div class="level-item">
-                <input type="checkbox" [checked]="stars.TRES.checked" (change)="stars.TRES.checked = !stars.TRES.checked; starSelected();" />
+                <input type="checkbox" [checked]="stars.TRES.checked" (change)="stars.TRES.checked = !stars.TRES.checked; starSelected(stars.TRES.checked,3);" />
                 <span class="icon star-ylw side-icon" *ngFor="let star of getStars(3)" ></span>
             </div>
           </div>
@@ -95,7 +95,7 @@
         <div class="level">
           <div class="level-left">
             <div class="level-item">
-                <input type="checkbox" [checked]="stars.DOS.checked" (change)="stars.DOS.checked = !stars.DOS.checked; starSelected();" />
+                <input type="checkbox" [checked]="stars.DOS.checked" (change)="stars.DOS.checked = !stars.DOS.checked; starSelected(stars.DOS.checked,2);" />
                 <span class="icon star-ylw side-icon" *ngFor="let star of getStars(2)" ></span>
             </div>
           </div>
@@ -103,7 +103,7 @@
         <div class="level">
           <div class="level-left">
             <div class="level-item">
-                <input type="checkbox" [checked]="stars.UNO.checked" (change)="stars.UNO.checked = !stars.UNO.checked; starSelected();" />
+                <input type="checkbox" [checked]="stars.UNO.checked" (change)="stars.UNO.checked = !stars.UNO.checked; starSelected(stars.UNO.checked, 1);" />
                 <span class="icon star-ylw side-icon" *ngFor="let star of getStars(1)" ></span>
             </div>
           </div>

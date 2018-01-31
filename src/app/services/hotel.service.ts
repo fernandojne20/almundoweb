@@ -9,35 +9,38 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class HotelService {
 
-    constructor(private http:HttpClient){
+  constructor(private http: HttpClient) {
 
-    }
+  }
 
-    searchHotels(): Observable<Hotel[]>{
+  searchHotels(parameters: any = undefined): Observable<Hotel[]> {
 
-        // return this.http.get('https://jsonplaceholder.typicode.com/posts');
-        return this.http.get<Hotel[]>('assets/data.json');
+    if (parameters) {
+      return this.http.get<Hotel[]>('http://localhost:3000/hotels', {params: parameters});
+    } else {
+      return this.http.get<Hotel[]>('http://localhost:3000/hotels');
     }
-    
-    getStars(numberStars: number): number[] {
-        if (numberStars) {
-            return Array(numberStars).fill(1);
-        } else {
-            return [];
-        }
+  }
+
+  getStars(numberStars: number): number[] {
+    if (numberStars) {
+      return Array.from(Array(numberStars), (e, i) => i + 1);
+    } else {
+      return [];
     }
+  }
 }
 
 
- export class Hotel {
+export class Hotel {
 
-    constructor(
-        private id:number,
-        private name:string,
-        private stars:number,
-        private price:number,
-        private image:string,
-        private amenities:string[]){
+  constructor(
+    private id: number,
+    private name: string,
+    private stars: number,
+    private price: number,
+    private image: string,
+    private amenities: string[]) {
 
-    }
+  }
 }
