@@ -1,4 +1,4 @@
-# Almundo Examen Fronted
+# Almundo Examen Frontend
 # Presentado por: Fernando Nuñez Estrada
 
 En este repositorio se encuentra la parte Frontend de la prueba
